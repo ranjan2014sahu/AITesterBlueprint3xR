@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Salesforce Login Automation Suite" thread-count="1" parallel="false">
+    <test name="Valid Login Tests">
+        <classes>
+            <class name="com.sf.tests.ValidLoginTest">
+                <methods>
+                    <include name="verifyLoginPageLoads"/>
+                    <include name="verifyValidLogin"/>
+                    <include name="verifyRememberMeCheckbox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Invalid Login Tests">
+        <classes>
+            <class name="com.sf.tests.InvalidLoginTest">
+                <methods>
+                    <include name="verifyInvalidUsername"/>
+                    <include name="verifyInvalidPassword"/>
+                    <include name="verifyBothCredentialsInvalid"/>
+                    <include name="verifyEmptyUsername"/>
+                    <include name="verifyEmptyPassword"/>
+                    <include name="verifyBothFieldsEmpty"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
